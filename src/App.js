@@ -4,6 +4,9 @@ import Form from './Form';
 import WeatherWidget from './WeatherWidget';
 import './App.css';
 
+const LINK = 'http://apidev.accuweather.com';
+const APIKEY = 'hoArfRosT1215';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -19,8 +22,7 @@ class App extends Component {
 
   fetchData = (city = '') => {
     this.setState({ loading: true });
-    const LINK = 'http://apidev.accuweather.com';
-    const APIKEY = 'hoArfRosT1215';
+
     axios.get(`${LINK}/locations/v1/search`, {
       method: 'get',
       params: {
