@@ -1,22 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class Input extends Component {
-
-    onChange(e) {
-        this.props.onChange({type: e.target.type, value: e.target.value});
-    }
-
-    render() {
-        return (
-            <input
-                type={this.props.type}
-                placeholder='City'
-                value={this.props.search}
-                required={true}
-                onChange={(e) => this.onChange(e)}
-            />
-        );
-    }
-}
+const Input = (props) => {
+  return (
+    <input
+      name={props.type}
+      placeholder='City'
+      value={props.search}
+      required={true}
+      onChange={props.onChange}
+    />
+  );
+};
 
 export default Input;
