@@ -15,8 +15,8 @@ class Form extends Component {
     this.props.fetchData(this.state.search);
   }
 
-  onChange = (data) => {
-    this.setState({[data.type]: data.value})
+  onChange = (e) => {
+    this.setState({[e.target.name]: e.target.value})
   };
 
   render() {
